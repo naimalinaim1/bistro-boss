@@ -1,3 +1,4 @@
+import useTitle from "../../../hooks/useTitle/useTitle";
 import Banner from "../Banner/Banner";
 import BistroBoss from "../BistroBoss/BistroBoss";
 import Category from "../Category/Category";
@@ -6,8 +7,11 @@ import PoplarMenu from "../PopularMenu/PoplarMenu";
 import Testimonials from "../Testimonials/Testimonials";
 
 const Home = () => {
+  // set title
+  useTitle("Home");
+
   return (
-    <main className="mb-96">
+    <main>
       <Banner />
       <div className="max-w-[1100px] mx-auto">
         <Category />
