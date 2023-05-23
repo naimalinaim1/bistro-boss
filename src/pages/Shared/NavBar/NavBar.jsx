@@ -17,13 +17,14 @@ const NavBar = () => {
         <ActiveLink to="/menu">Our Menu</ActiveLink>
       </li>
       <li>
-        <ActiveLink to="/shop">Our Shop</ActiveLink>
+        <ActiveLink to="/order">Our Order</ActiveLink>
       </li>
       <li>
         <ActiveLink to="/singout">Sing Out</ActiveLink>
       </li>
     </>
   );
+
   return (
     <nav
       className="navbar fixed z-10"
