@@ -20,7 +20,13 @@ const NavBar = () => {
         <ActiveLink to="/order">Our Order</ActiveLink>
       </li>
       <li>
-        <ActiveLink to="/singout">Sing Out</ActiveLink>
+        <ActiveLink to="/signup">Sign UP</ActiveLink>
+      </li>
+      <li>
+        <ActiveLink to="/login">Login</ActiveLink>
+      </li>
+      <li>
+        <p>Sing Out</p>
       </li>
     </>
   );

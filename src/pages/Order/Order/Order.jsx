@@ -6,18 +6,24 @@ import "react-tabs/style/react-tabs.css";
 import useMenu from "../../../hooks/useMenu/useMenu";
 import OrderTab from "../OrderTab/OrderTab";
 import { useLocation } from "react-router-dom";
+import useTitle from "../../../hooks/useTitle/useTitle";
 
 const Order = () => {
-  const [tabIndex, setTabIndex] = useState(0);
+  useTitle("Order");
+
+  const categories = ["salad", "pizza", "soup", "desserts", "Drinks"];
+  const location = useLocation();
+  const initialIndex = categories.indexOf(
+    location.search.split("=")[1]?.toLowerCase()
+  );
+
+  const [tabIndex, setTabIndex] = useState(initialIndex < 0 ? 0 : initialIndex);
   const [menu] = useMenu();
   const desserts = menu.filter((item) => item.category === "dessert");
   const soup = menu.filter((item) => item.category === "soup");
   const salad = menu.filter((item) => item.category === "salad");
   const pizza = menu.filter((item) => item.category === "pizza");
   const drinks = menu.filter((item) => item.category === "drinks");
-
-  const location = useLocation();
-  console.log(location.search.split("=")[1]);
 
   return (
     <div>
